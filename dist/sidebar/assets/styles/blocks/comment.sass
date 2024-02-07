@@ -1,0 +1,52 @@
+.add-comment-block
+    display: flex
+    column-gap: 10px
+    width: 100%
+    
+.add-comment-input
+    display: inline-block
+    width: 100%
+    font-size: 14px
+    font-family: "Roboto Mono", monospace
+    color: $main-text-color
+    flex: 1
+    padding: 5px
+    border-bottom: $border-width-s solid transparent
+    visibility: hidden
+
+    &::placeholder
+        font-style: italic
+        
+    &:focus
+        outline: none
+        border-bottom: $border-width-s solid $add-comment-boorder-color
+        visibility: visible
+
+    &.visible
+        visibility: visible
+
+    &:read-only
+      cursor: not-allowed
+      border-bottom: none
+
+.comment-title
+    display: block
+    height: 11px
+    line-height: 11px
+    background-color: transparent
+    font-size: 10px
+    position: absolute
+    top: -5px
+    left: 0
+
+.comment-label
+    position: relative
+    display: block
+    width: 100%
+    line-height: 30px
+    height: 30px
+
+.comment-btn
+    width: 15px
+    height: 15px
+        
