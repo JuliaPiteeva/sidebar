@@ -1,0 +1,30 @@
+.sidebar
+    color: $main-text-color
+    font-family: 'Roboto Mono', monospace
+    position: absolute
+    left: 1%
+    top: 1%
+    width: 465px
+    height: 95%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    background: $block-bg-color
+    +shadow
+    
+
+.sidebar-row
+    padding: 15px 10px
+    width: 100%
+
+    &.sidebar-row--border-bottom
+        border-bottom: $border-width-s solid $border-color-light
+
+.sidebar-btns
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: auto
+    border-top: $border-width-s solid $border-color-light
+    min-height: 80px
