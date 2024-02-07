@@ -1,0 +1,211 @@
+$reqest-block-min-height: 120px
+
+.request
+    min-height: $reqest-block-min-height
+
+.request-toolbar
+    margin-bottom: 10px
+    width: 100%
+
+.request-title
+    color: $main-text-color
+    font-weight: 900
+    font-size: 16px
+    flex-grow: 0
+    
+.request-content
+    font-size: 16px
+    font-family: "Roboto Mono", monospace
+    font-weight: normal
+    color: $main-text-color
+    width: 100%
+    margin-bottom: 15px
+    
+.request-result
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    margin-bottom: 10px
+    padding: 10px
+
+.request-result-header
+    width: 100%
+    margin-bottom: 15px
+
+// request-success
+.request-success
+    font-family: "Roboto Mono", monospace
+    cursor: pointer
+
+.request-detailing
+    width: 100%
+    max-width: 415px
+    margin-bottom: 15px
+    font-size: 12px
+    text-align: left
+
+.request-adress
+    display: block
+    margin-bottom: 15px
+    cursor: pointer
+    word-wrap: break-word
+    //&:hover
+    //  font-weight: bold
+
+    &.adress-title
+        height: 30px
+        line-height: 30px
+        padding-left: 25px
+        background-repeat: no-repeat
+        background-size: 20px
+        background-position: center left
+        background-image: url(/assets/icons/warning.svg)
+
+.success-style
+    background-color: $success-request-bg-color
+    border: $border-width-m solid $success-request-border-color
+
+    .add-comment-input
+        visibility: visible
+        background-color: $success-request-bg-color
+
+    .request-title
+        border-bottom: $border-width-s solid $main-text-color
+
+//request-error
+.request-error
+    font-size: 14px
+    color:$error-text-color
+.error-text
+    color:$error-text-color
+    font-size: 14px
+    font-family: "Roboto Mono", monospace
+    font-weight: normal
+
+.error-style
+    background: $error-bg-color
+
+    .request-title
+        color: $error-text-color
+
+    &:hover
+        background: $error-bg-hover-color
+        .add-comment-input
+           background-color: $error-bg-hover-color
+           visibility: visible
+    .add-comment-input
+        background: $error-bg-color
+        visibility: visible
+
+.warning-style
+    background: $new-request-bg-color
+
+    .request-title
+        color: $error-text-color
+
+    .add-comment-input
+        visibility: visible
+
+    .add-comment-input
+        background: $new-request-bg-color
+
+    .request-error
+        font-size: 14px
+        color: $new-request-text-color
+
+    .request-title
+        color: $new-request-text-color
+
+// new-request
+.new-request-header
+    display: flex 
+    align-items: center
+    width: 100%
+    margin-bottom: 15px
+    column-gap: 5px
+
+.new-request-content
+    width: 100%
+    margin-bottom: 15px
+    
+.new-request-status-row
+    margin-bottom: 5px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+    color: $new-request-text-color
+    span
+        width: 100%
+        font-size: 14px
+        word-wrap: break-word
+        word-break: break-all
+    
+.new-request
+    min-height: 100px
+    padding: 10px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    background-color: $new-request-bg-color
+    margin-bottom: 10px
+    border: $border-width-m solid $new-request-border-color
+    color: $new-request-text-color
+    font-family: "Roboto Mono", monospace
+    font-weight: normal
+
+    .new-request-status-block
+        width: 100%
+
+    .new-request-status
+        color: $new-request-text-color
+        font-size: 14px
+        font-family: "Roboto Mono", monospace
+        font-weight: normal
+
+    .request-error
+        margin-bottom: 10px
+
+    .add-comment-input
+        visibility: visible
+
+    .request-title
+        color: $new-request-text-color
+
+    .add-comment-input
+        background-color: $new-request-bg-color
+    
+// state-request
+
+.state-request
+    color: $state-req-text-color
+    min-height: 100px
+    background-color: $state-req-bg-color
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 10px
+    border: $border-width-m solid $state-req-border-color
+    margin-bottom: 15px
+    &:hover
+        background: $atate-req-bg-hover-color
+
+    .state-request-title
+        color: $state-req-text-color
+
+.state-request-content
+    margin-bottom: 15px
+
+.state-request-text
+    font-size: 14px
+    font-family: "Roboto Mono", monospace
+    font-weight: normal
+    color: $state-req-text-color
+
+.state-request-header
+    display: flex 
+    align-items: center
+    width: 100%

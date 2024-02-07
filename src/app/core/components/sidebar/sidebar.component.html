@@ -1,0 +1,81 @@
+
+<aside class="sidebar">
+  <div class="sidebar-row sidebar-row--border-bottom">
+    <!-- Панель поиска -->
+    <div class="panel" [ngClass]="{'invalid': false}">
+      <label class="input-label">
+        <input class="input-text" type="text" 
+          placeholder="Введите текст"
+          title="Введите текст"
+          autofocus
+          (ngModelChange)="enteredNumberChanged()"
+        >
+      </label>
+
+      <div 
+        class="dropdown" 
+        [ngClass]="{ 'active': isDropdownVisible }"
+        appClickOutside 
+        (clickOutside)="isDropdownVisible = false;">
+        <div class="dropdown-top" (click)="isDropdownVisible = !isDropdownVisible;">
+          <a class="top-link" title="Выбрать тип">{{ selectedType }}</a>
+        </div>
+        <div class="dropdown-menu">
+          <ul class="list" [hidden]="!isDropdownVisible">
+            <li class="list-item"
+                *ngFor="let option of selectListOptions"
+                (click)="selectedOption(option)">
+                {{ option.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="icon-button"
+          (click)="addTask()"
+          title="Поиск"
+          [title]="'Поиск'">
+          <svg class="search-icon">
+            <use xlink:href="../assets/icons/sprite.svg#search"></use>
+          </svg>
+      </button>
+
+      <label class="icon-button icon-button--right-border-radius"
+              [title]="'Загрузить из файла'">
+        <input 
+          class="input-file" type="file"  
+          [(ngModel)]="loadedFile"
+          (change)="readFile($event)" >
+        <svg class="upload-icon">
+          <use xlink:href="../assets/icons/sprite.svg#upload"></use>
+        </svg>
+      </label>
+    </div>
+    <label class="add-comment-label">
+      <input class="add-comment-input visible" type="text"
+        title="Комментарий"
+        placeholder="Введите комментарий"
+        [(ngModel)]="addedComment"> 
+    </label>
+  </div>
+
+  <div class="sidebar-row result">
+      <ng-container *ngIf="true">
+        <h3 class="result-title">Карточки</h3>
+        <div *ngFor="let result of [1,2,3];">
+          <app-result></app-result>
+        </div>
+      </ng-container>
+  </div>
+
+  <div class="sidebar-row sidebar-btns">
+    <button 
+      class="icon-button icon-button--all-border-radius"
+      title="Очистить"
+      >
+      <svg class="del-icon del-icon--large">
+        <use xlink:href="../assets/icons/sprite.svg#trash"></use>
+      </svg>
+    </button>
+  </div>
+</aside> 
