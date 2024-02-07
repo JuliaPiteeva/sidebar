@@ -1,0 +1,34 @@
+$icon-white-color: $main-white-color
+
+.icon
+    height: 18px
+    width: 18px
+    fill: $icon-color
+    stroke: $icon-color
+    transition: stroke .3s, fill 0.3s
+
+    &:hover
+        stroke: $icon-hover-color
+        fill: $icon-hover-color
+        
+.plus-icon, .minus-icon
+    height: 15px
+    width: 15px
+
+
+.del-icon--large
+    height: 20px
+    width: 20px
+    stroke: $icon-color-btn-del-large
+
+
+.upload-icon, .search-icon
+    fill: $icon-white-color
+    width: 18px
+    height: 18px
+    transition: rotate 0.5s
+
+.rollup-icon
+    transform: rotate(180deg)
+    &.rotate
+        transform: rotate(0)

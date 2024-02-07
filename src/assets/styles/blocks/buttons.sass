@@ -1,0 +1,38 @@
+.small-icon-button
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: transparent
+    width: 18px
+    height: 18px
+    &:focus
+        outline: none
+        .icon
+            stroke: $icon-hover-color
+            fill: $icon-hover-color
+
+    &.delete
+        margin-left: auto
+        
+.icon-button
+    width: 50px
+    height: 48px
+    background-color: $main-color-green
+    transition: background 0.5s
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: auto
+    
+    &:hover, &:focus
+        background: $btn-bg-accent-color
+
+    &:focus
+        outline: none
+
+    &.icon-button--right-border-radius
+        border-radius: 0 3px 3px 0
+
+    &.icon-button--all-border-radius
+        border-radius: 3px

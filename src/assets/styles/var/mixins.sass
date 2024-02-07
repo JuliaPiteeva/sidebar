@@ -1,0 +1,18 @@
+=radius
+    border-radius: 3px
+=radius-lg
+    border-radius: 20px
+=radius-mid
+    border-radius: 8px
+=shadow
+  box-shadow: 0 2px 8px rgba(#000, 0.2)
+
+@mixin hideLongText()
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+@mixin  mainTextSettings()
+    font-family: "Roboto Mono", monospace
+    color: $main-text-color
+    font-size: 14px
