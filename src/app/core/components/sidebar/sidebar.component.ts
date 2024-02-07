@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { takeLast } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,39 +8,26 @@ import { takeLast } from 'rxjs';
 export class SidebarComponent {
   selectedType: any;
   isDropdownVisible = false;
-  addedCipher = true
-  showNumberTypeSelection = true;
-  selectListOptions = [{
-    name: 'Line 1'
-  }]
-  addTaskOnEnter($event: any){
-  }
+  loadedFile: any;
+  addedComment: string = '';
+
+  selectListOptions = [
+    {
+    name: 'Option 1'},
+    {
+      name: 'Option 1'
+    }
+  ]
+
   enteredNumberChanged(){}
-  cipherTypes = [{
-    name: 'name'
-  }]
-  enteredTasks = [{
-    info: '',
-    cipherType: '', 
-  }];
+
   selectedOption(option: any){
     this.selectedType = option;
   }
+  
   addTask(){}
-  loadedFile: any;
+  
   readFile($event: any){}
-  addedComment: any;
-  trackTask: any;
-  deleteTask(event: any){}
-  pendingTasksArray=[];
-  results=[{
-    taskInfo: '',
-    queryInfo: '',
-    cipherType: '',
-    queryId: ''
-  }]
-  trackResult: any;
-  restartAll(){}
-  deleteItem(){}
+
 }
 
